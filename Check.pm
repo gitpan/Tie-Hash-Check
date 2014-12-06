@@ -6,9 +6,10 @@ use warnings;
 
 # Modules.
 use Error::Pure qw(err);
+use Error::Pure::Utils;
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Error level.
 $Error::Pure::Utils::LEVEL = 5;
@@ -217,11 +218,11 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © Michal Špaček 2009-2014
+ © 2009-2014 Michal Špaček
  BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut

@@ -4,7 +4,8 @@ use warnings;
 
 # Modules.
 use Tie::Hash::Check;
-use Test::More 'tests' => 1;
+use Test::More 'tests' => 2;
+use Test::NoWarnings;
 
 # Test.
 tie my %hash, 'Tie::Hash::Check', {
@@ -12,4 +13,4 @@ tie my %hash, 'Tie::Hash::Check', {
 	'two' => 2,
 };
 my $scalar = scalar %hash;
-is($scalar, '2/8');
+like($scalar, qr{\d/8}, 'Get scalar value of hash.');
